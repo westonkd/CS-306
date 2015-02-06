@@ -32,7 +32,7 @@ public class MergeSorter {
             
             //sort the ever growing array and output times
             System.out.println("Number of Items (n), Time in Milliseconds");
-            for (int i = 0; i < inputArr.length; i++) {
+            for (int i = 0; i < inputArr.length; i+=100) {
                 //create our sorter
                 //MergeSorter bubbleSorter = new BubbleSorterTwo(Arrays.copyOfRange(fileIntegerArray, 0, i));
                 MergeSorter sorter = new MergeSorter();
