@@ -30,6 +30,7 @@ public class BubbleSorterTwo {
             }
 
             //sort the ever growing array and output times
+            System.out.println("Number of Items (n), Time in Milliseconds");
             for (int i = 0; i < fileIntegerArray.length; i++) {
                 //create our sorter
                 BubbleSorterTwo bubbleSorter = new BubbleSorterTwo(Arrays.copyOfRange(fileIntegerArray, 0, i));
@@ -39,7 +40,8 @@ public class BubbleSorterTwo {
                 bubbleSorter.sort();
                 long endTime = System.currentTimeMillis();
 
-                System.out.println(i + "," + (endTime - startTime));
+                System.out.print("[" + i + ", " + (endTime - startTime) + "], ");
+                //System.out.println(i + "," + (endTime - startTime));
             }
 
         } catch (FileNotFoundException ex) {
